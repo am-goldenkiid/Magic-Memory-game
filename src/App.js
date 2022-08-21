@@ -18,6 +18,9 @@ function App() {
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [disabled, setDisabled] = useState(false)
 
+  const ddate = new Date()
+  const year = ddate.getFullYear()
+
   //shuffle cards
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages] //This spreads the cards twice
@@ -85,6 +88,9 @@ function App() {
         ))}
       </div>
       <p>Turns: {turns}</p>
+      <p>&copy; Copyright Chris {year}</p>
+
+
     </div>
   );
 }
